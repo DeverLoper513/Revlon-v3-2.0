@@ -51,6 +51,34 @@
         </div>
       </div>
 
+     <div class="accordion-item">
+    <div class="accordion-header">Review's Widget</div>
+    <div class="accordion-content">
+      <div class="yotpo-widget-instance"
+           data-yotpo-instance-id="1281996"
+           data-yotpo-product-id="{{product.id}}"
+           data-yotpo-name="{{ product.title | escape }}"
+           data-yotpo-url="{{ shop.url }}{{ product.url }}"
+           data-yotpo-image-url="{{ product.featured_image | product_img_url:"large" |replace: '?', '%3F' | replace: '&','%26'}}"
+           data-yotpo-description="{{ product.description | escape }}"
+           mode-preview=true></div>
+    </div>
+  </div>
+
+<div class="accordion-item">
+    <div class="accordion-header">Q&A</div>
+    <div class="accordion-content">
+      <div class="yotpo-widget-instance"
+           data-yotpo-instance-id="1281999"
+           data-yotpo-product-id="{{product.id}}"
+           data-yotpo-name="{{ product.title | escape }}"
+           data-yotpo-url="{{ shop.url }}{{ product.url }}"
+           data-yotpo-image-url="{{ product.featured_image | product_img_url:"large" |replace: '?', '%3F' | replace: '&','%26'}}"
+           data-yotpo-description="{{ product.description | escape }}"
+           mode-preview=true></div>
+    </div>
+  </div>
+  
   <div class="accordion-item">
     <div class="accordion-header">Star Rating</div>
     <div class="accordion-content">
@@ -79,34 +107,6 @@
     </div>
   </div>
 
-  <div class="accordion-item">
-    <div class="accordion-header">Review's Widget</div>
-    <div class="accordion-content">
-      <div class="yotpo-widget-instance"
-           data-yotpo-instance-id="1281996"
-           data-yotpo-product-id="{{product.id}}"
-           data-yotpo-name="{{ product.title | escape }}"
-           data-yotpo-url="{{ shop.url }}{{ product.url }}"
-           data-yotpo-image-url="{{ product.featured_image | product_img_url:"large" |replace: '?', '%3F' | replace: '&','%26'}}"
-           data-yotpo-description="{{ product.description | escape }}"
-           mode-preview=true></div>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">Q&A</div>
-    <div class="accordion-content">
-      <div class="yotpo-widget-instance"
-           data-yotpo-instance-id="1281999"
-           data-yotpo-product-id="{{product.id}}"
-           data-yotpo-name="{{ product.title | escape }}"
-           data-yotpo-url="{{ shop.url }}{{ product.url }}"
-           data-yotpo-image-url="{{ product.featured_image | product_img_url:"large" |replace: '?', '%3F' | replace: '&','%26'}}"
-           data-yotpo-description="{{ product.description | escape }}"
-           mode-preview=true></div>
-    </div>
-  </div>
-
 <script>
   document.querySelectorAll(".accordion-header").forEach(header => {
     header.addEventListener("click", function() {
@@ -125,5 +125,6 @@
     });
   });
 </script>
+
 
 </body>
